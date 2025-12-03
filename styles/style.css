@@ -4,64 +4,65 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* HEADER */
+/* ---------------- HEADER ---------------- */
 .header {
     width: 100%;
     height: 80px;
     background: white;
-    position: relative;
+    display: flex;                 /* FLEX ✔ */
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
 }
 
 /* LOGO */
 .logo {
     font-size: 40px;
     color: purple;
-    position: absolute;
-    left: 40px;
-    top: 18px;
 }
 
 /* NAVIGATION */
 .nav {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    right: 40px;
-    top: 28px;
+    display: flex;                 /* FLEX ✔ */
+    gap: 35px;
 }
 
 .nav li {
-    display: inline-block;
-    margin-left: 35px;
-    font-size: 16px;;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* HERO SECTION */
+/* ---------------- HERO SECTION ---------------- */
 .hero {
     width: 100%;
     height: 480px;
     position: relative;
     overflow: hidden;
+
+    display: flex;                  /* FLEX ✔ */
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-img {
     width: 100%;
-    height: 606px;
-    position: absolute;
+    height: 100%;
     object-fit: cover;
-
+    position: absolute;
 }
 
 /* HERO TEXT */
 .hero-text {
     position: absolute;
-    top: 238px;
-    left: 407px;
-    right: 407px;
-    bottom: 277px;
     text-align: center;
     color: white;
+
+    display: flex;                   /* FLEX ✔ */
+    flex-direction: column;          /* Stacks text */
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-text h1 {
@@ -76,52 +77,54 @@ body {
     letter-spacing: 2px;
 }
 
-/* SERVICES INTRO */
+/* ---------------- SERVICES INTRO ---------------- */
 .services-title {
     margin-top: 84px;
     padding: 50px 110px;
+
+    display: flex;                       /* FLEX ✔ */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.services-title h3 {
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-.services-title h2 {
-    font-size: 30px;
-    margin-top: 10px;
-}
-
-.services-title p {
-    margin-top: 15px;
-    color: #555;
-    line-height: 22px;
-}
-
-/* SERVICES GRID */
+/* ---------------- SERVICES GRID ---------------- */
 .services-container {
+    display: flex;                       /* FLEX ✔ */
+    flex-wrap: wrap;                     /* WRAP ✔ */
+    gap: 33px;                           /* spacing */
+    justify-content: center;
     margin-left: 418px;
     margin-right: 98px;
-    margin-top: 0px;
+    margin-top: 30px;
+    margin-bottom: 140px;
 }
 
+/* Single service card */
 .service-box {
     width: 300px;
     height: 270px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 15px;
+
+    display: flex;                       /* FLEX ✔ */
+    flex-direction: column;              /* vertical layout */
+    align-items: center;
+    text-align: left;
+
+    order: 0;                            /* You can change this order */
 }
 
+/* Example:
+.service-box:nth-child(3) { order: -1; }
+*/
+
 .service-box img {
-    width: 300px;
+    width: 100%;
     height: 170px;
     object-fit: cover;
     border-radius: 5px;
 }
 
 .service-box h4 {
+    width: 100%;
     margin: 10px 0 5px;
 }
 
