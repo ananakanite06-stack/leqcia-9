@@ -109,12 +109,9 @@ body {
     align-items: center;
     text-align: left;
 
-    order: 0;                            /* You can change this order */
+    order: 0;                            
 }
 
-/* Example:
-.service-box:nth-child(3) { order: -1; }
-*/
 
 .service-box img {
     width: 100%;
